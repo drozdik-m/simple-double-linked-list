@@ -5,7 +5,7 @@
 
 "List" is a **simple double linked list class**. This module is easy to use, light, small and has **no dependencies**, except assert-testing module for testing (not needed for usage).
 
-Testing module is written in TypeScript and compiled into commonJS. 
+The module is written in TypeScript and compiled into commonJS. 
 
 **This is not any high-tech code. It is not dependent on 98761195187413.4 modules and does not offer unseen JavaScript magic. Download this, save an hour of your time and use it to create something awesome and efficient. We #keepItSimple.**
 
@@ -21,15 +21,15 @@ npm install simple-double-linked-list --save
 
 Linked list is a **way to store unknown or large quantity of content**, just like an array. 
 
-List has entirely different structure, then array though. Array is just a chunk of memory with initial point (position [0]). If you want for example 10th element, you know exactly, when to find it(array[10]). But, it is very inefficient when you want to insert or erase elements anywhere except the end. You must move the entire array by one position, which results in linear asymptotic complexity (inefficient). This is where double linked list excels.
+List has entirely different structure, then array though. Array is just a chunk of memory with initial point (position [0]). If you want for example 10th element, you know exactly, when to find it (array[10]). But, it is very inefficient when you want to insert or erase elements anywhere except the end. You must move the entire array by one position, which results in linear asymptotic complexity (inefficient). This is where double linked list excels.
 
 Double linked list can insert or delete at any position with constant asymptotic complexity (very efficient). The problem is, that lists elements cannot be accessed randomly. The list must iterate all the elements to find or reach specific node, which results in inefficient linear asymptotic complexity. The is the lists weakness.
 
-Summary: **List is very efficient at inserting and deleting elements at any position, but the elements cannot be accessed randomly, like with an array.** You would have to iterate all the elements and search for it (don't worry, the list class has search method implemented).
+Summary: **List is very efficient at inserting and deleting elements at any position, but the elements cannot be accessed randomly, like with an array.** You would have to iterate thought the nodes and search (don't worry, the List class has search method implemented).
 
 ## Usage
 
-### Import and create new list
+### Import and create new List
 
 You can import the module using __import__ keyword or __require__ function. In TypeScript, the List class is a generic class ("<>" thingies).
 
@@ -54,7 +54,7 @@ var list = new L.List();
 
 ### List iterator
 
-The list is may seem assembled very strangely for some programmers unfamiliar with a linked list. Browsing nodes and values can be confusing. That is why List come with class ListIterator, which handles browsing elements very easily. 
+The list may seem assembled very strangely for some programmers unfamiliar with a linked list. Browsing nodes and values can be confusing. That is why List come with class ListIterator, which handles browsing elements very easily. 
 
 By calling simple methods, link .Next() or .Previous(), you can explore the List without any knowledge about List structure whatsoever.
 
@@ -66,47 +66,47 @@ Iterator examples:
 var list = new List();
 
 //Add some random values
-list1.AddFront(1);
-list1.AddFront(5);
-list1.AddFront(6851);
-list1.AddFront(0);
-list1.AddFront(666);
+list.AddFront(1);
+list.AddFront(5);
+list.AddFront(6851);
+list.AddFront(0);
+list.AddFront(666);
 
 //Get iterator, pointing on the first element
-var iterator = list1.Begin(); // == 1
+var iterator = list.Begin(); // == 1
 
 //---1---5---6851---0---666---
 //---^------------------------
 
 //Move the iterator to the next position
-list1.Next(); // == 5
+iterator.Next(); // == 5
 
 //---1---5---6851---0---666---
 //-------^--------------------
 
 //Move the iterator to the end
-list1.ToLast(); // == 666
+iterator.ToLast(); // == 666
 
 //---1---5---6851---0---666---
 //----------------------^^^---
 
 //Extract the iterators value (current 666)
-var evilNumber = list1.Value(); // == 666
+var evilNumber = iterator.Value(); // == 666
 
 //Check if the iterator is at the end -> The iterator is at the end when values are no longer valid or defined (example below)
-list1.IsAtEnd(); // false
+iterator.IsAtEnd(); // false
 
 //Move the iterator to the next position
-list1.Next(); // The 666 number was the last one, so the iterator is now at the end (points to null)
+iterator.Next(); // The 666 number was the last one, so the iterator is now at the end (points to null)
 
 //---1---5---6851---0---666---
 //--------out of range--------
 
 //Check if iterator is at the end
-list1.IsAtEnd(); // true
+iterator.IsAtEnd(); // true
 
 //We know, that iterator was at the end, so this will throw an error
-var someNumber = list1.Value();
+var someNumber = iterator.Value();
 
 ```
 
@@ -145,19 +145,19 @@ iterator.IsAtEnd(); //Returns boolean - True if the iterator is at the end (poin
 
 Class List is constructed to work closely with its iterator. If you want to insert new values, delete old values or just update current values, you will have to use an iterator to indicate a position.
 
-Working with list is easy. Here are all implemented methods:
+Working with the List is easy. Here are all implemented methods:
 
 ```javascript
 
 //Instantiate new and empty List
 var list = new List();
 
-list.AddFront("textFront"); //Adds value in the front
+list.AddFront("textFront"); //Adds a value in the front
 
-list.AddBack("textBack"); //Adds value in the back
+list.AddBack("textBack"); //Adds a value in the back
 
-list.Find("text"); //Finds a node with value "text" and returns ListIterator pointing to the found element
-//If node was not found, the iterators .IsAtEnd() will returns true
+list.Find("text"); //Finds a node with value "text" and returns ListIterator pointing to the found node
+//If a node was not found, the method returns "null"
 
 list.InsertAfter("textToInsert", iterator); //Inserts new value "textToInsert" after value on by the iterator
 
@@ -175,7 +175,7 @@ list.Clear(); //Removes all values in the list
 
 list.Size(); //Returns number of values in the list
 
-list.Begin(); //Returns an iterator pointing to the begin of the list (the first value)
+list.Begin(); //Returns an iterator pointing to the beginning of the list (the first value)
 
 list.End(); //Returns an iterator pointing to the end of the list (the last value)
 
