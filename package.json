@@ -1,0 +1,33 @@
+{
+  "name": "easy-double-linked-list",
+  "version": "1.0.0",
+  "description": "I am a simple man. I don’t need any insane magic lists with thousands of lines of never used methods. I just need a light, easy to use and reliable double linked list with comfortable iterator. Do you want the same think? Well nice, because I made one!",
+  "main": "dist/list.js",
+  "typings": "dist/list.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "node ./dist/tests/list_tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drozdik-m/simple-double-linked-list.git"
+  },
+  "keywords": [
+    "linked",
+    "list",
+    "double-linked-list",
+    "liked-list",
+    "light",
+    "easy",
+    "JavaScript"
+  ],
+  "author": "Martin Drozdík <info@bonsai-development.cz> (http://bonsai-development.cz)",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/drozdik-m/simple-double-linked-list/issues"
+  },
+  "homepage": "https://github.com/drozdik-m/simple-double-linked-list#readme",
+  "dependencies": {
+    "assert-testing": "^1.0.5"
+  }
+}
