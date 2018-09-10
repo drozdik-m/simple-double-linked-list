@@ -11,10 +11,10 @@ Testing module is written in TypeScript and compiled into commonJS.
 
 ## Download
 
-You can download the module on [GitHub/simple-souble-linked-list](https://github.com/drozdik-m/simple-souble-linked-list) or using [npm/simple-souble-linked-list](https://www.npmjs.com/package/simple-souble-linked-list) service.
+You can download the module on [GitHub/simple-double-linked-list](https://github.com/drozdik-m/simple-double-linked-list) or using [npm/simple-double-linked-list](https://www.npmjs.com/package/simple-double-linked-list) service.
 
 ```
-npm install simple-souble-linked-list --save
+npm install simple-double-linked-list --save
 ```
 
 ## Double linked list - What is that? (skip if you know)
@@ -34,7 +34,7 @@ Summary: **List is very efficient at inserting and deleting elements at any posi
 You can import the module using __import__ keyword or __require__ function. In TypeScript, the List class is a generic class ("<>" thingies).
 
 ```javascript
-import { List } from "easy-double-linked-list";
+import { List } from "simple-double-linked-list";
 
 //Instantiate new and empty List
 var list = new List();
@@ -45,7 +45,7 @@ let list = new List<string>(); //<string> or whatever data type you want to stor
 ```
 
 ```javascript
-var L = require("easy-double-linked-list")
+var L = require("simple-double-linked-list")
 
 //Instantiate new and empty List
 var list = new L.List();
@@ -185,6 +185,6 @@ list.Print(); //Prints lists content into the console
 
 ### More examples
 
-There is a testing file included in this module ("easy-double-linked-list/tests/list_tests.ts" for TypeScript or "easy-double-linked-list/dist/tests/list_tests.js" for JavaScript). The test is "not small", so you may find more examples of the the List class there.
+There is a testing file included in this module ("simple-double-linked-list/tests/list_tests.ts" for TypeScript or "simple-double-linked-list/dist/tests/list_tests.js" for JavaScript). The test is "not small", so you may find more examples of the the List class there.
 
 Sorry for my English, I hope it's readable.
