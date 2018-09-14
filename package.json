@@ -5,7 +5,6 @@
   "main": "dist/src/list.js",
   "typings": "dist/src/list.d.ts",
   "scripts": {
-    "build": "tsc",
     "test": "node ./dist/tests/list_tests.js"
   },
   "repository": {
@@ -19,7 +18,8 @@
     "liked-list",
     "light",
     "easy",
-    "JavaScript"
+    "JavaScript",
+    "TypeScript"
   ],
   "author": "Martin Drozdík <info@bonsai-development.cz> (http://bonsai-development.cz)",
   "license": "GPL-3.0-or-later",

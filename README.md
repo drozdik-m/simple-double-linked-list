@@ -39,7 +39,7 @@ import { List } from "simple-double-linked-list";
 //Instantiate new and empty List
 var list = new List();
 
-//For TypeScript programmers: List in a generic class, so declaration in TypeScript would look like:
+//For TypeScript programmers: List is a generic class, so declaration in TypeScript would look like:
 let list = new List<string>(); //<string> or whatever data type you want to store and work with
 
 ```
