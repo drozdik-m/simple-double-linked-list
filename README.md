@@ -1,5 +1,5 @@
 
-![List class - banner](images/heading-image.png?raw=true "List - easy and light double link list")
+![List class - banner](images/list-heading-image.png?raw=true "List - easy and light double link list")
 
 # List
 
