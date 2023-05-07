@@ -1,6 +1,3 @@
-
-![List class - banner](images/list-heading-image.png?raw=true "List - easy and light double link list")
-
 # List
 
 "List" is a **simple double linked list class**. This module is easy to use, light, small and has **no dependencies**, except assert-testing module for testing (not needed for usage).
